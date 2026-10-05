@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money'st - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="home.html" class="nav-btn">Home</a>
+            <a href="transaction.html" class="nav-btn">Transaction</a>
+            <a href="savings.html" class="nav-btn">Savings</a>
+            <a href="help.html" class="nav-btn">Help</a>
+            <a href="Contact.html" class="nav-btn">Contact Us</a>
+            <a href="SignUp.html" class="btn-SignUp">
+                <img src="DASHBOARD PAGE/profile.png" alt="Profile Icon">
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-contact">
+        <div class="contact-container">
+            <!-- Left Side - Image -->
+            <div class="contact-image-section">
+                <img src="CONTACT PAGE/PEOPLE.png" class="contact-visual" alt="Contact Us">
+            </div>
+
+            <!-- Right Side - Form -->
+            <div class="form-section-contact">
+                <div class="form-header-contact">
+                    <h1>Contact Our Team</h1>
+                    <p>Reach out and we'll get in touch within 24 hours</p>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row-contact">
+                        <div class="form-group-contact">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+                        <div class="form-group-contact">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-contact">
+                        <label for="email" class="email-label-contact">
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group-contact">
+                        <label for="phone">Phone Number</label>
+                        <div class="phone-container-contact">
+                            <div class="country-code">+62</div>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group-contact">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn-contact">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

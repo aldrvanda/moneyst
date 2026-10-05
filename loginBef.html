@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money'st - Login</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="helpBef.html" class="nav-btn">Help</a>
+            <a href="ContactBef.html" class="nav-btn">Contact Us</a>
+            <a href="SignUpBef.html" class="btn-SignUp">
+                <img src="DASHBOARD PAGE/profile.png" alt="Profile Icon">
+            </a>
+        </nav>
+    </div>
+
+    <!-- Login Page Layout -->
+    <div class="Login-container">
+        <!-- Left Side - Form -->
+        <div class="Login-form-section">
+            <div class="Login-header">
+                <h1>Login</h1>
+            </div>
+
+            <div class="form-container-Login">
+                <form id="LoginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+                    </div>
+
+                    <div class="form-group password-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Login</button>
+
+                    <div class="signup-link">
+                        <p>Don't have an account? <a href="SignUpBef.html">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer-section">
+                <div class="social-Login">
+                    <div class="social-btn"><img src="LOGIN PAGE/facebook.png" alt="Facebook"></div>
+                    <div class="social-btn"><img src="LOGIN PAGE/google.png" alt="Google"></div>
+                    <div class="social-btn"><img src="LOGIN PAGE/apple.png" alt="apple"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Image -->
+        <div class="Login-image-section">
+            <img src="LOGIN PAGE/LOGIN.png" class="Login-visual">
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification-Login" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

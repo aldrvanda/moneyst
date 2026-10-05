@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money’st</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!--  Navigation -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-btn">Home</a>
+                <a href="transaction.html" class="nav-btn">Transaction</a>
+                <a href="savings.html" class="nav-btn">Savings</a>
+                <a href="help.html" class="nav-btn">Help</a>
+                <a href="Contact.html" class="nav-btn">Contact Us</a>
+                <a href="SignUp.html" class="btn-SignUp">
+                    <img src="DASHBOARD PAGE/profile.png">
+                </a>
+            </nav>
+        </div>
+
+        
+
+        <!--  Main Content -->
+        <section class="financial-cards">
+            <div class="hero-sidebar">
+                <img src="DASHBOARD PAGE/people.jpg">
+            </div>
+            <div class="right-content">
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-indicator blue"></div>
+                        <div class="card-content">
+                            <h3>My Balance</h3>
+                            <p class="amount" id="home-balance">Rp. 25.000.000</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-indicator green"></div>
+                        <div class="card-content">
+                            <h3>Income</h3>
+                            <p class="amount" id="home-income">Rp. 1.500.000</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-indicator yellow"></div>
+                        <div class="card-content">
+                            <h3>My Savings</h3>
+                            <p class="amount" id="home-saved">Rp. 7.500.000</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-indicator orange"></div>
+                        <div class="card-content">
+                            <h3>Expense</h3>
+                            <p class="amount" id="home-expense">Rp. 5.000.000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main-home">
+                    <div class="expenses-chart">
+                        <div class="expenses-header">
+                            <h3>All Expenses</h3>
+                            <div class="time-selector">
+                                <button class="time-btn">
+                                    <i class="fa fa-calendar"></i>
+                                     6 Month ▼</button>
+                            </div>
+                        </div>
+                        <div class="expense-breakdown">
+                            <div class="breakdown-item">
+                                <span class="label">Daily avg</span>
+                                <span class="amount" id="home-avg-daily">Rp. 50.000</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">Weekly avg</span>
+                                <span class="amount" id="home-avg-weekly">Rp. 350.000</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">Monthly avg</span>
+                                <span class="amount" id="home-avg-monthly">Rp. 1.300.000</span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-section">
+                                <div class="chart" id="home-donut" role="img" aria-label="Expenses by category"></div>
+                                <ul class="legend" id="home-legend"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="savings-section">
+                        <div class="section-header">
+                            <h3>My Savings</h3>
+                            <a href="savings.html" class="view-all">View all</a>
+                        </div>
+                        <div class="savings-list" id="home-goals"></div>
+                    </div>
+                </div>
+        </section>
+
+    </div>
+    <script src="data.js"></script>
+    <script src="pages.js"></script>
+</body>
+</html>
