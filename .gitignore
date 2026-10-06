@@ -1,0 +1,12 @@
+# Claude Code / Impeccable tooling (local only)
+.claude/
+.impeccable/
+PRODUCT.md
+DESIGN.md
+CLAUDE.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

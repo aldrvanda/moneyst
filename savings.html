@@ -4,26 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Money'st - Savings</title>
-  <link rel="stylesheet" href="style2.css"/>
+  <link rel="stylesheet" href="css/style2.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <!-- Navigation -->
     <div class="navbar">
         <div class="logo">
-            <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+            <img src="assets/images/logo.jpg" alt="logo">
         </div>
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="Main">
             <a href="home.html" class="nav-btn">Home</a>
             <a href="transaction.html" class="nav-btn">Transaction</a>
-            <a href="savings.html" class="nav-btn">Savings</a>
+            <a href="savings.html" class="nav-btn" aria-current="page">Savings</a>
             <a href="help.html" class="nav-btn">Help</a>
             <a href="Contact.html" class="nav-btn">Contact Us</a>
-            <a href="SignUp.html" class="btn-SignUp">
-                <img src="DASHBOARD PAGE/profile.png" alt="Profile Icon">
-            </a>
         </nav>
+        <a href="SignUp.html" class="btn-SignUp" aria-label="Account">
+                <img src="assets/images/profile.png" alt="">
+            </a>
     </div>
 
   <!-- Main Content -->
@@ -33,8 +35,8 @@
       <!-- Total Saving Card -->
       <div class="total-saving-card">
         <h3>Total Saving</h3>
-        <h1>Rp.7.500.000,00</h1>
-        <p class="monthly-increase">+1.500.000,00 this month</p>
+        <h1 id="sv-total">Rp.7.500.000,00</h1>
+        <p class="monthly-increase" id="sv-month">+1.500.000,00 this month</p>
       </div>
 
       <!-- My Savings -->
@@ -43,44 +45,7 @@
           <h3>My Savings</h3>
           <a href="viewSavings.html" class="view-all">View all</a>
         </div>
-        <div class="savings-list">
-          <div class="saving-item">
-            <div class="saving-info">
-              <span class="saving-name">Gaming PC</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 40%"></div>
-              </div>
-            </div>
-            <span class="saving-amount">Rp. 2.000.000</span>
-          </div>
-          <div class="saving-item">
-            <div class="saving-info">
-              <span class="saving-name">New Laptop</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
-              </div>
-            </div>
-            <span class="saving-amount">Rp. 10.000.000</span>
-          </div>
-          <div class="saving-item">
-            <div class="saving-info">
-              <span class="saving-name">PS5</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 60%"></div>
-              </div>
-            </div>
-            <span class="saving-amount">Rp. 7.500.000</span>
-          </div>
-          <div class="saving-item">
-            <div class="saving-info">
-              <span class="saving-name">Top up game</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 30%"></div>
-              </div>
-            </div>
-            <span class="saving-amount">Rp. 2.000.000</span>
-          </div>
-        </div>
+        <div class="savings-list" id="sv-goals"></div>
       </div>
     </div>
 
@@ -88,20 +53,18 @@
     <div class="center-section">
         <!-- Welcome Message -->
         <div class="welcome-card">
-            <p>Selamat datang di Moneyst,<br>
-                tempat terbaik untuk<br>
-                merencanakan dan<br>
-                mengelola tabunganmu<br>
-                demi gadget impian!</p>
+            <p>Welcome to Moneyst,<br>
+                the best place to plan<br>
+                and manage your savings<br>
+                for the gadgets<br>
+                you dream of!</p>
             <a href="addSavings.html" class="start-saving-btn">START SAVING</a>
       </div>
 
       <!-- Monthly Progress -->
         <div class="monthly-progress-card">
             <h3>Monthly Progress</h3>
-            <div class="chart-container">
-            <img src="S1P5/graph month.png" alt="Monthly Graph">
-            </div>
+            <div class="chart-container" id="sv-monthly"></div>
         </div>
     </div>
 
@@ -109,42 +72,16 @@
     <div class="right-section">
       <!-- Calendar -->
       <div class="calendar-header">
-        <span>MARET 2025</span>
+        <button type="button" class="mst-cal-nav" id="sv-cal-prev" aria-label="Previous month">‹</button>
+        <span id="sv-cal-title" aria-live="polite">March 2025</span>
+        <button type="button" class="mst-cal-nav" id="sv-cal-next" aria-label="Next month">›</button>
       </div>
-      <div class="calendar-grid">
-        <img src="S1P5/dates.png" alt="Calendar Dates">
-      </div>
+      <div class="calendar-grid" id="sv-calendar"></div>
 
       <!-- Recent Savings -->
       <div class="recent-savings-card">
         <h3>Recent Savings</h3>
-        <div class="recent-savings-list">
-          <div class="recent-item">
-            <div class="recent-dot tosca"></div>
-            <span class="recent-text">1 March</span>
-            <span class="recent-amount">Rp 250.000,00</span>
-          </div>
-          <div class="recent-item">
-            <div class="recent-dot blue"></div>
-            <span class="recent-text">2 March</span>
-            <span class="recent-amount">Rp. 100.000,00</span>
-          </div>
-          <div class="recent-item">
-            <div class="recent-dot purple"></div>
-            <span class="recent-text">5 March</span>
-            <span class="recent-amount">Rp. 50.000,00</span>
-          </div>
-          <div class="recent-item">
-            <div class="recent-dot orange"></div>
-            <span class="recent-text">7 March</span>
-            <span class="recent-amount">Rp. 75.000,00</span>
-          </div>
-          <div class="recent-item">
-            <div class="recent-dot yellow"></div>
-            <span class="recent-text">8 March</span>
-            <span class="recent-amount">Rp.90.000,00</span>
-          </div>
-        </div>
+        <div class="recent-savings-list" id="sv-recent"></div>
       </div>
     </div>
   </div>
@@ -158,36 +95,32 @@
     <!-- Left Analytics Card -->
     <div class="analytics-left">
       <!-- Saving History Card -->
-      <div class="saving-history-card">
+      <a class="saving-history-card mst-history-link" href="viewSavings.html">
         <div class="history-header">
-          <div class="history-bars">
-            <img src="S1P5/bars analytic.png">
-          </div>
+          <div class="history-bars" id="sv-history-bars" aria-hidden="true"></div>
           <div class="history-text">
             <span class="history-title">Saving History</span>
-            <span class="history-subtitle">20 / 50 Completed</span>
-            <div class="next-arrow">›</div>
+            <span class="history-subtitle" id="sv-history">20 / 50 Completed</span>
+            <div class="next-arrow" aria-hidden="true">›</div>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Circular Progress Card -->
       <div class="circular-progress-card">
-        <div class="circular-progress">
-          <img src="S1P8/CYCLE.png">
-        </div>
+        <div class="circular-progress" id="sv-ring"></div>
         <div class="progress-amounts">
           <div class="complete-amount card-box green-border">
             <div class="vertical-line green-line"></div>
             <div class="amount-text">
-              <span class="amount-label">Rp. 50.000.000</span>
+              <span class="amount-label" id="sv-complete">Rp. 50.000.000</span>
               <span class="amount-desc">Complete Savings</span>
             </div>
           </div>
           <div class="ongoing-amount card-box orange-border">
             <div class="vertical-line orange-line"></div>
               <div class="amount-text">
-                <span class="amount-label">Rp. 15.000.000</span>
+                <span class="amount-label" id="sv-ongoing">Rp. 15.000.000</span>
                 <span class="amount-desc">On-Going Savings</span>
               </div>
           </div>
@@ -203,26 +136,26 @@
           <div class="legend-year">
             <div class="legend-item">
               <div class="legend-dot this-year"></div>
-              <span>This Year</span>
+              <span>Saved</span>
             </div>
             <div class="legend-item">
               <div class="legend-dot last-year"></div>
-              <span>Last Year</span>
+              <span>Spent</span>
             </div>
-            <div class="year-selector">
-              <span>2025</span>
-              <span class="dropdown-arrow">▼</span>
-            </div>
+            <label class="year-selector">
+              <span class="sr-only">Year</span>
+              <select id="sv-year"><option>2025</option></select>
+            </label>
           </div>
         </div>
         
-        <div class="chart-area">
-          <img src="S1P8/ANALYTICS.png">
-        </div>
+        <div class="chart-area" id="sv-analytics"></div>
       </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

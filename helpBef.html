@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money'st - Help</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
     <div class="navbar">
         <div class="logo">
-            <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+            <img src="assets/images/logo.jpg" alt="logo">
         </div>
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="Main">
             <a href="index.html" class="nav-btn">Home</a>
-            <a href="helpBef.html" class="nav-btn">Help</a>
+            <a href="helpBef.html" class="nav-btn" aria-current="page">Help</a>
             <a href="ContactBef.html" class="nav-btn">Contact Us</a>
-            <a href="SignUpBef.html" class="btn-SignUp">
-                <img src="DASHBOARD PAGE/profile.png" alt="Profile Icon">
-            </a>
         </nav>
+        <a href="SignUpBef.html" class="btn-SignUp" aria-label="Account">
+                <img src="assets/images/profile.png" alt="">
+            </a>
     </div>
 
     <!-- Main Content -->
@@ -37,66 +38,66 @@
             <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(1)">
-                    <h3>Layanan apa yang disediakan oleh website ini?</h3>
+                    <h3>What services does this website provide?</h3>
                     <span class="toggle-icon" id="icon-1">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-1">
-                    <p>Website kami memberikan layanan pencatatan pengeluaran dan pemasukan harian, pengelolaan keuangan, pengelolaan target anggaran, laporan keuangan secara real-time, serta tabungan dengan tujuan.</p>
+                    <p>We help you record your daily income and expenses, manage your finances, set budget targets, see real-time financial reports, and save toward goals.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 2 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(2)">
-                    <h3>Bagaimana cara mencatat pengeluaran atau pemasukan di website ini?</h3>
+                    <h3>How do I record an expense or income?</h3>
                     <span class="toggle-icon" id="icon-2">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-2">
-                    <p>Pastikan anda sudah Login, kemudian anda dapat memilih menu Transaction kemudian isi detail pengeluaran atau pemasukan anda kemudian save.</p>
+                    <p>Make sure you are logged in, open the Transaction menu, choose Add New Income or Add New Expense, fill in the details, then click Save.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(3)">
-                    <h3>Bagaimana cara membuat akun di website ini?</h3>
+                    <h3>How do I create an account?</h3>
                     <span class="toggle-icon" id="icon-3">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-3">
-                    <p>Anda dapat membuat akun dengan klik sign Login pada dashboard aplikasi, lalu isi tupe untuk menglai formulir dan data yang diperlukan.</p>
+                    <p>Click Get Started or the profile icon at the top right, then fill in the sign-up form with your email and password.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 4 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(4)">
-                    <h3>Apakah saya dapat mengubah atau menghapus catatan tabungan?</h3>
+                    <h3>Can I edit or delete my saving goals?</h3>
                     <span class="toggle-icon" id="icon-4">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-4">
-                    <p>Anda dapat mengedit atau menghapus catatan tabungan melalui menu "View Savings" kapan saja.</p>
+                    <p>Yes. You can edit or delete your saving goals anytime from the "View Savings" page.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 5 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(5)">
-                    <h3>Apakah data keuangan saya aman di website ini?</h3>
+                    <h3>Is my financial data safe on this website?</h3>
                     <span class="toggle-icon" id="icon-5">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-5">
-                    <p>Keuangan anda terjaga kerahasiaannya, kami menggunakan enkripsi dan memastikan data keuangan pengguna aman melalui protokol keamanan terkini.</p>
+                    <p>Your financial data is kept private. We use encryption and up-to-date security protocols to keep it safe.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 6 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(6)">
-                    <h3>Apakah ada biaya untuk menggunakan layanan ini?</h3>
+                    <h3>Does it cost anything to use this service?</h3>
                     <span class="toggle-icon" id="icon-6">▼</span>
                 </div>
                 <div class="faq-answer" id="answer-6">
-                    <p>Layanan dasar kami bersifat gratis, anda dapat menggunakan seluruh layanan tanpa perlu memkirkan biayanya.</p>
+                    <p>Our basic service is free, so you can use every feature without worrying about the cost.</p>
                 </div>
             </div>
         </div>
@@ -204,6 +205,6 @@
         </div>
     </div>
 
-    <script src="script2.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 </html>

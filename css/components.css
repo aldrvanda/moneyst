@@ -1,0 +1,701 @@
+/*---------- SHARED DATA-DRIVEN COMPONENTS ----------*/
+/* Used by pages.js on the dashboard, transaction, finance record and savings pages.
+   Colors come from the existing palettes in style.css and style2.css. */
+
+:root {
+    --mst-ink: #15223C;
+    --mst-muted: #5f6b66;
+    --mst-green: #4CAF50;
+    --mst-green-deep: #153C38;
+    --mst-mint: #E8FCE9;
+    --mst-income: #4FC02E;
+    --mst-expense: #FE4343;
+    --mst-spent-from: #FF3D00;
+    --mst-spent-to: #FF9D00;
+    --mst-track: #EEF1EF;
+}
+
+.mst-wrap {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Empty states ---------- */
+.mst-empty {
+    padding: 18px 4px;
+    color: var(--mst-muted);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mst-empty p {
+    margin-bottom: 8px;
+}
+
+.mst-empty-link {
+    color: #2D500E;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Goal amounts: "Rp 7.000.000 / of Rp 20.000.000" ---------- */
+.mst-goal-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.mst-of {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--mst-muted);
+}
+
+/* ---------- Home legend ---------- */
+#home-legend {
+    list-style: none;
+    min-width: 0;
+}
+
+#home-legend .legend-item {
+    color: var(--mst-ink);
+}
+
+.mst-legend-label {
+    flex: 1;
+}
+
+.mst-legend-value {
+    color: var(--mst-muted);
+    font-variant-numeric: tabular-nums;
+    margin-left: 12px;
+}
+
+/* ---------- Transaction donut ---------- */
+.pie-chart-transaction {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mst-donut {
+    position: relative;
+    width: 196px;
+    height: 196px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.mst-donut-center {
+    position: absolute;
+    inset: 34px;
+    border-radius: 50%;
+    background: #FFF9F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+}
+
+.mst-donut-label {
+    font-size: 16px;
+    color: #C40000;
+}
+
+.mst-donut-total {
+    font-size: 18px;
+    color: #C40000;
+}
+
+.mst-cat-legend {
+    list-style: none;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--mst-ink);
+}
+
+.mst-cat-legend li {
+    display: grid;
+    grid-template-columns: 12px 1fr auto auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.mst-cat-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mst-cat-pct {
+    color: var(--mst-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.mst-cat-amt {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    min-width: 110px;
+}
+
+/* ---------- Grouped bar charts (transaction weeks, savings analytics) ---------- */
+.mst-bars {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    height: 220px;
+    padding: 0 4px;
+    border-bottom: 1px solid #d5d9d7;
+    background-image: linear-gradient(to top, #eceeed 1px, transparent 1px);
+    background-size: 100% 25%;
+}
+
+.mst-bars-tall {
+    height: 300px;
+}
+
+.mst-bar-group {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mst-bar-pair {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+}
+
+.mst-bar {
+    width: min(26px, 40%);
+    min-height: 2px;
+    border-radius: 6px 6px 0 0;
+}
+
+.mst-bar.income  { background: var(--mst-income); }
+.mst-bar.expense { background: var(--mst-expense); }
+.mst-bar.saved   { background: linear-gradient(180deg, var(--mst-green) 30%, var(--mst-green-deep) 100%); }
+.mst-bar.spent   { background: linear-gradient(180deg, var(--mst-spent-from) 30%, var(--mst-spent-to) 100%); }
+
+.mst-bar-label {
+    margin-top: 8px;
+    margin-bottom: -28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: var(--mst-muted);
+    white-space: nowrap;
+}
+
+.mst-bars-scale {
+    margin-top: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--mst-muted);
+    text-align: right;
+}
+
+/* ---------- Savings: monthly columns ---------- */
+.mst-columns {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 12px;
+    height: 180px;
+    padding: 16px 8px 0;
+}
+
+.mst-column {
+    flex: 1;
+    max-width: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.mst-column-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mst-ink);
+}
+
+.mst-column-track {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.mst-column-fill {
+    width: 100%;
+    min-height: 2px;
+    border-radius: 10px 10px 4px 4px;
+    background: linear-gradient(180deg, #F7A58A 0%, #FFE2BF 100%);
+}
+
+.mst-column-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #475569;
+}
+
+/* ---------- Savings: overall ring ---------- */
+.mst-ring {
+    width: 200px;
+    height: 200px;
+}
+
+.mst-ring-track {
+    fill: none;
+    stroke: #FFF1E3;
+    stroke-width: 14;
+}
+
+.mst-ring-fill {
+    fill: none;
+    stroke: var(--mst-green);
+    stroke-width: 14;
+    stroke-linecap: round;
+}
+
+.mst-ring-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    fill: var(--mst-ink);
+    text-anchor: middle;
+}
+
+.mst-ring-caption {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    fill: var(--mst-muted);
+    text-anchor: middle;
+}
+
+/* ---------- Goal cards: progress bar + range ---------- */
+.mst-goalbar {
+    width: 100%;
+    height: 14px;
+    border-radius: 999px;
+    background: #FDE7D3;
+    overflow: hidden;
+}
+
+.mst-goalbar-fill {
+    height: 100%;
+    min-width: 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3E9B44, var(--mst-green));
+}
+
+.mst-goalbar-fill[style*="width: 0%"] {
+    min-width: 0;
+}
+
+.mst-goal-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.mst-range {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: 1px solid #222;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: #222;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.addsave-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addsave-list .savings-card-addSave .view-details-btn {
+    float: none;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+/* ---------- Finance record ---------- */
+a.add-btn {
+    text-decoration: none;
+}
+
+.finance-item .delete-btn:focus-visible,
+.finance-item:focus-within .delete-btn {
+    opacity: 1;
+}
+
+.finance-item {
+    transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.3s ease;
+}
+
+.finance-item.is-leaving {
+    transform: translateX(-24px);
+    opacity: 0;
+}
+
+/* Newly added row or goal */
+.is-new {
+    animation: mst-highlight 2.6s ease-out;
+    border-radius: 12px;
+}
+
+@keyframes mst-highlight {
+    0%, 35% { background-color: #C9F2C7; box-shadow: 0 0 0 6px #C9F2C7; }
+    100% { background-color: transparent; box-shadow: 0 0 0 6px transparent; }
+}
+
+/* ---------- Toast ---------- */
+.mst-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: min(560px, calc(100vw - 32px));
+    padding: 14px 14px 14px 20px;
+    border-radius: 14px;
+    background: #1F3D2B;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    box-shadow: 0 10px 30px rgba(21, 60, 56, 0.3);
+    transform: translate(-50%, 140%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease, visibility 0s linear 0.35s;
+}
+
+.mst-toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+}
+
+.mst-toast-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.mst-toast-undo {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    background: #C9F2C7;
+    color: #1F3D2B;
+    font: 600 14px 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.mst-toast-undo:hover {
+    background: #E8FCE9;
+}
+
+.mst-toast-close {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.mst-toast-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.mst-toast button:focus-visible,
+.mst-empty-link:focus-visible,
+a.add-btn:focus-visible {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .is-new { animation-duration: 0.01s; background-color: #E8FCE9; }
+    .mst-toast, .mst-toast.show, .finance-item { transition: none; }
+}
+
+/* ---------- Screen-reader-only text ---------- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- Home: period selector + donut total ---------- */
+label.time-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+label.time-btn select {
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+label.time-btn:focus-within {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 2px;
+}
+
+.mst-home-donut-total {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Righteous', sans-serif;
+    font-size: 15px;
+    color: var(--mst-ink);
+    line-height: 1.2;
+}
+
+.mst-home-donut-label {
+    font-size: 11px;
+    color: var(--mst-muted);
+}
+
+/* ---------- Finance record: period caption ---------- */
+.mst-period-caption {
+    margin: -16px 0 12px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #3F4A45;
+}
+
+/* ---------- Savings: calendar ---------- */
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+}
+
+.mst-cal-nav {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--mst-ink);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mst-cal-nav:hover {
+    background: #fff;
+}
+
+.mst-cal-nav:focus-visible {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 2px;
+}
+
+.calendar-grid {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 10px;
+}
+
+.mst-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    padding: 16px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+}
+
+.mst-cal-weekday {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mst-muted);
+    padding-bottom: 4px;
+}
+
+.mst-cal-day {
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 13px;
+    color: #333;
+    font-variant-numeric: tabular-nums;
+}
+
+.mst-cal-day.has-saving {
+    background: #DDF6DE;
+    color: #1F3D2B;
+    font-weight: 700;
+}
+
+.mst-cal-day.has-saving::after {
+    content: "";
+    position: absolute;
+    bottom: 12%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #2E9E5B;
+}
+
+.mst-cal-day.is-today {
+    box-shadow: inset 0 0 0 2px var(--mst-ink);
+}
+
+.mst-cal-summary {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #3F4A45;
+}
+
+/* ---------- Savings: history link + mini bars ---------- */
+.mst-history-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.mst-history-link:hover {
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.14);
+}
+
+.mst-history-link:focus-visible {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 3px;
+}
+
+.history-bars#sv-history-bars {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 4px;
+    height: 40px;
+}
+
+.mst-mini-bar {
+    display: flex;
+    align-items: flex-end;
+    width: 9px;
+    height: 100%;
+    border-radius: 4px;
+    background: #FFEBD9;
+    overflow: hidden;
+}
+
+.mst-mini-bar > span {
+    display: block;
+    width: 100%;
+    background: linear-gradient(180deg, var(--mst-spent-to), var(--mst-spent-from));
+    border-radius: 4px;
+}
+
+.mst-mini-bar.is-complete > span {
+    background: var(--mst-green);
+}
+
+/* ---------- Savings: year selector ---------- */
+label.year-selector select {
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: #333;
+    cursor: pointer;
+}
+
+label.year-selector:focus-within {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 2px;
+}
+
+/* ---------- View savings: Edit is a link styled as the existing button ---------- */
+a.edit-btn-viewsave {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+a.edit-btn-viewsave:focus-visible,
+.delete-btn-viewsave:focus-visible,
+.mst-cancel-edit:focus-visible {
+    outline: 3px solid var(--mst-green);
+    outline-offset: 2px;
+}
+
+/* ---------- Add savings: cancel link in edit mode ---------- */
+.mst-cancel-edit {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #3F4A45;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

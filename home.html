@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money’st</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -16,18 +17,18 @@
         <!--  Navigation -->
         <div class="navbar">
             <div class="logo">
-                <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+                <img src="assets/images/logo.jpg" alt="logo">
             </div>
-            <nav class="nav-menu">
-                <a href="home.html" class="nav-btn">Home</a>
+            <nav class="nav-menu" aria-label="Main">
+                <a href="home.html" class="nav-btn" aria-current="page">Home</a>
                 <a href="transaction.html" class="nav-btn">Transaction</a>
                 <a href="savings.html" class="nav-btn">Savings</a>
                 <a href="help.html" class="nav-btn">Help</a>
                 <a href="Contact.html" class="nav-btn">Contact Us</a>
-                <a href="SignUp.html" class="btn-SignUp">
-                    <img src="DASHBOARD PAGE/profile.png">
-                </a>
             </nav>
+            <a href="SignUp.html" class="btn-SignUp" aria-label="Account">
+                    <img src="assets/images/profile.png" alt="">
+                </a>
         </div>
 
         
@@ -35,7 +36,7 @@
         <!--  Main Content -->
         <section class="financial-cards">
             <div class="hero-sidebar">
-                <img src="DASHBOARD PAGE/people.jpg">
+                <img src="assets/images/mascot.jpg">
             </div>
             <div class="right-content">
                 <div class="cards-grid">
@@ -74,9 +75,15 @@
                         <div class="expenses-header">
                             <h3>All Expenses</h3>
                             <div class="time-selector">
-                                <button class="time-btn">
-                                    <i class="fa fa-calendar"></i>
-                                     6 Month ▼</button>
+                                <label class="time-btn">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <span class="sr-only">Expense period</span>
+                                    <select id="home-period">
+                                        <option value="3">Last 3 months</option>
+                                        <option value="6" selected>Last 6 months</option>
+                                        <option value="all">All time</option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div class="expense-breakdown">
@@ -112,7 +119,7 @@
         </section>
 
     </div>
-    <script src="data.js"></script>
-    <script src="pages.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>

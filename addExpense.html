@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money'st - Add Expense</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Righteous:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <div class="add-expense-container">
        <!-- Navigation -->
         <div class="navbar">
             <div class="logo">
-            <img src="DASHBOARD PAGE/logo.jpg" alt="logo">
+            <img src="assets/images/logo.jpg" alt="logo">
         </div>
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="Main">
             <a href="home.html" class="nav-btn">Home</a>
-            <a href="transaction.html" class="nav-btn">Transaction</a>
+            <a href="transaction.html" class="nav-btn" aria-current="page">Transaction</a>
             <a href="savings.html" class="nav-btn">Savings</a>
             <a href="help.html" class="nav-btn">Help</a>
             <a href="Contact.html" class="nav-btn">Contact Us</a>
-            <a href="SignUp.html" class="btn-SignUp">
-                <img src="DASHBOARD PAGE/profile.png" alt="Profile Icon">
-            </a>
         </nav>
+        <a href="SignUp.html" class="btn-SignUp" aria-label="Account">
+                <img src="assets/images/profile.png" alt="">
+            </a>
     </div>
      
         <!-- Form Section -->
@@ -95,6 +96,7 @@
         </div>
     </div>
      
-    <script src="script3.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script3.js"></script>
 </body>
 </html>
